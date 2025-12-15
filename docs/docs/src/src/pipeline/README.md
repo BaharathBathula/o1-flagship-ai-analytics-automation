@@ -14,3 +14,14 @@ Key Checks:
 
 This component supports production-grade analytics automation.
 
+## Metrics Engine Module
+
+The Metrics Engine computes repeatable analytics metrics from validated datasets.
+
+Capabilities:
+- Dataset size metrics (row and column counts)
+- Numeric summary statistics for reporting
+- Custom KPI computation using simple aggregation rules
+
+This module enables automated, auditable analytics reporting and supports
+business-facing insight generation.
