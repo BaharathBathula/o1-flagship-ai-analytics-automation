@@ -1,14 +1,6 @@
-"""
-Report Delivery Module
-----------------------
-Exports analytics outputs and maintains delivery audit logs.
-Designed for automated analytics reporting workflows.
-"""
-
 import os
 import json
 from datetime import datetime
-
 
 class ReportDelivery:
     def __init__(self, output_dir: str = "outputs", log_dir: str = "logs"):
@@ -24,6 +16,20 @@ class ReportDelivery:
                 {"name": m.name, "value": m.value, "metadata": getattr(m, "metadata", None)}
                 for m in metrics
             ],
+        }
+        filepath = os.path.join(self.output_dir, filename)
+        with open(filepath, "w") as f:
+            json.dump(payload, f, indent=2)
+        return filepath
+
+    def export_full_report_to_json(self, metrics, insights: dict, filename: str):
+        payload = {
+            "generated_at": datetime.utcnow().isoformat(),
+            "metrics": [
+                {"name": m.name, "value": m.value, "metadata": getattr(m, "metadata", None)}
+                for m in metrics
+            ],
+            "insights": insights,
         }
         filepath = os.path.join(self.output_dir, filename)
         with open(filepath, "w") as f:
