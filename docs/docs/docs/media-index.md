@@ -13,3 +13,8 @@
 ## Professional Profiles
 - LinkedIn: https://www.linkedin.com/in/baharath-bathula-0b0724171/
 - GitHub: https://github.com/BaharathBathula
+
+## Professional Associations
+- IEEE Membership/Profile: https://www.ieee.org/profile/landing/profile.html
+- ACM Membership/Profile: 
+- INFORMS Membership/Profile: https://myaccount.informs.org/s/
